@@ -110,36 +110,6 @@ header .overlay {
   color: white;
 }
 
-/* .center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* About section */
-
-/* #about {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 0 20px;
-  width: 100%;
-  display: grid;
-  Define Auto Row size
-  grid-auto-rows: 500px;
-  Define our columns
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 2em;
-  justify-items: center;
-  align-items: center;
-} */
-
-/*
-#about-img {
-  margin: 2% auto;
-  text-align: center;
-  grid-column: span 2;
-} */
-
 .row-about {
   max-width: 1200px;
   margin: 5rem auto;
@@ -227,6 +197,60 @@ header .overlay {
   border-radius: 10px;
   padding: 20px;
   color: #fff;
+}
+
+.card-description {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: white;
+  color: #444444;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.card-img:hover .card-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+#card-1 {
+  background-image: url(assets/images/apiething-special-occasions.jpeg);
+  opacity: 0.5;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#card-1:hover {
+  opacity: 1;
+}
+
+#card-2 {
+  background-image: url(assets/images/apiething-catering.jpeg);
+  opacity: 0.5;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#card-2:hover {
+  opacity: 1;
+}
+
+#card-3 {
+  background-image: url(assets/images/apiething-office-celebrations.jpeg);
+  opacity: 0.5;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#card-3:hover {
+  opacity: 1;
 }
 
 .description-content {
@@ -318,7 +342,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-1 {
     background-image: url(assets/images/apiething-special-occasions.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
@@ -327,7 +351,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-2 {
     background-image: url(assets/images/apiething-catering.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
@@ -336,7 +360,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-3 {
     background-image: url(assets/images/apiething-office-celebrations.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
@@ -386,7 +410,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-1 {
     background-image: url(assets/images/apiething-special-occasions.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
@@ -395,7 +419,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-2 {
     background-image: url(assets/images/apiething-catering.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
@@ -404,7 +428,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #card-3 {
     background-image: url(assets/images/apiething-office-celebrations.jpeg);
-    opacity: 0.7;
+    opacity: 1;
     /* transition: 0.5s ease; */
     backface-visibility: hidden;
     background-repeat: no-repeat;
