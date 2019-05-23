@@ -1,0 +1,443 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.alert {
+  background-color: #C5A785;
+  color: #444444;
+  border: 0;
+  border-radius: 0;
+}
+
+.alert-info .alert-link {
+  color: rgb(145, 113, 77);
+}
+
+.alert-info .alert-link:hover {
+  color: black;
+}
+
+/* brown heading */
+
+h5.brown-heading {
+  color: #C5A785;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+header .container {
+    position: relative;
+    z-index: 2;
+  }
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('assets/videos/pie-hero-vid.mp4') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+
+.btn-solid {
+  background-color: #C5A785;
+  border: none;
+  color: #444444;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-solid:hover {
+  opacity: 1;
+  color: #444444;
+}
+
+.btn-outline {
+  /* background-color: #B33F62; */
+  /* display: inline-block; */
+  color: #C5A785;
+  border: 2px solid #C5A785;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.btn-outline:hover {
+  background-color: #C5A785;
+  color: white;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About section */
+
+#about {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: 1fr;
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 1em;
+  /* justify-items: center; */
+  align-items: center;
+}
+
+#about img {
+  margin: 2% auto;
+  text-align: center;
+}
+
+#about .normal-link {
+  color: #C5A785;
+}
+
+#about .normal-link h6 {
+  font-size: 0.8rem;
+}
+
+/* What we do section */
+
+#services {
+  margin: 5rem 0;
+}
+
+#services > h3, #services > p {
+  text-align: center;
+}
+
+.services-body {
+  margin: 2rem auto 3rem auto;
+  /* width: 30%; */
+  line-height: 2;
+}
+
+
+/* services cards section */
+
+#cards-services {
+  max-width: 1200px;
+  /* max-height: 500px; */
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: 500px;
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+  /* align-items: center;
+  justify-items: center; */
+}
+
+#cards-services article {
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+.description-content {
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+}
+
+/* horizontal line */
+
+hr {
+  margin: 10rem auto 5rem auto;
+  border-top: 1px dashed #808080;
+}
+
+/* footer */
+
+#footer {
+  max-width: 1200px;
+  /* max-height: 500px; */
+  margin: 5rem auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: 1fr;
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+/* font awesome */
+
+.fab:hover {
+  text-decoration: none;
+}
+
+#footer-bar {
+  width: 100%;
+  background-color: black;
+  color: #808080;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  #about {
+    margin: 4rem 0;
+  }
+
+  .col-sm-8 img {
+    display: none;
+  }
+
+  .col-sm-4 h6 {
+    text-align: center;
+  }
+
+  .col-sm-4 a {
+    margin: 0 auto;
+  }
+
+  .card img {
+    width: 348px;
+    height: 348px;
+    margin: 0 auto;
+  }
+
+  .services-body {
+    width: 92%;
+  }
+
+  hr {
+    width: 92%;
+  }
+
+  .card-description {
+    visibility: visible;
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    background: white;
+    color: #444444;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  #card-1 {
+    background-image: url(assets/images/apiething-special-occasions.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-2 {
+    background-image: url(assets/images/apiething-catering.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-3 {
+    background-image: url(assets/images/apiething-office-celebrations.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card img {
+    max-height: 288px;
+    width: auto;
+  }
+
+  #services {
+    margin: 2rem 0;
+  }
+
+  .services-body {
+    width: 90%;
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  .card-description {
+    visibility: visible;
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    background: white;
+    color: #444444;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  #card-1 {
+    background-image: url(assets/images/apiething-special-occasions.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-2 {
+    background-image: url(assets/images/apiething-catering.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-3 {
+    background-image: url(assets/images/apiething-office-celebrations.jpeg);
+    opacity: 0.7;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card img {
+    max-height: 348px;
+    width: auto;
+  }
+
+  #services {
+    margin: 5rem 0;
+  }
+
+  .services-body {
+    width: 30%;
+  }
+
+  hr {
+  width: 60%;
+  }
+
+  .card-description {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+    background: white;
+    color: #444444;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .card-img:hover .card-description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #card-1 {
+    background-image: url(assets/images/apiething-special-occasions.jpeg);
+    opacity: 0.5;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-1:hover {
+    opacity: 1;
+  }
+
+  #card-2 {
+    background-image: url(assets/images/apiething-catering.jpeg);
+    opacity: 0.5;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-2:hover {
+    opacity: 1;
+  }
+
+  #card-3 {
+    background-image: url(assets/images/apiething-office-celebrations.jpeg);
+    opacity: 0.5;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-3:hover {
+    opacity: 1;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
