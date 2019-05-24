@@ -126,6 +126,7 @@ header .overlay {
 .about-img {
   background: url(assets/images/about-section-pie.jpeg);
   background-position: center center;
+  background-repeat: no-repeat;
   height: 100%;
 }
 
@@ -298,11 +299,8 @@ hr {
 }
 
 
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .row-about {
     margin: 3rem auto 2rem auto;
   }
@@ -372,9 +370,78 @@ No media query for `xs` since this is the default in Bootstrap */
   }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .row-about {
+    margin: 3rem auto 2rem auto;
+  }
 
+  .column-about {
+    width: 100%;
+  }
 
-/* Medium devices (tablets, 768px and up) */
+  #about-content h3 {
+    text-align: center;
+  }
+
+  .card img {
+    width: 348px;
+    height: 348px;
+    margin: 0 auto;
+  }
+
+  .services-body {
+    width: 92%;
+  }
+
+  hr {
+    width: 92%;
+    margin: 3rem auto 2rem auto;
+  }
+
+  .card-description {
+    visibility: visible;
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    background: white;
+    color: #444444;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  #card-1 {
+    background-image: url(assets/images/apiething-special-occasions.jpeg);
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-2 {
+    background-image: url(assets/images/apiething-catering.jpeg);
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #card-3 {
+    background-image: url(assets/images/apiething-office-celebrations.jpeg);
+    opacity: 1;
+    /* transition: 0.5s ease; */
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #footer {
+    margin: 2rem auto;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
   .card img {
     max-height: 288px;
@@ -383,6 +450,13 @@ No media query for `xs` since this is the default in Bootstrap */
 
   #about-content h3 {
     text-align: center;
+  }
+
+  #about-content {
+    padding-left: 50px;
+    margin-top: -2rem;
+    margin-bottom: 0;
+    padding-right: 50px;
   }
 
   #services {
@@ -440,11 +514,15 @@ No media query for `xs` since this is the default in Bootstrap */
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
   .card img {
     max-height: 348px;
     width: auto;
+  }
+
+  .column-about {
+    width: 50%;
   }
 
   #services {
@@ -518,7 +596,7 @@ No media query for `xs` since this is the default in Bootstrap */
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 
 }
